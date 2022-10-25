@@ -5,6 +5,18 @@ import org.testng.Assert;
 
 public class S01_MinimumSizeSubarraySum {
 
+    /* https://leetcode.com/problems/minimum-size-subarray-sum/
+
+        Given an array of positive integers nums and a positive integer target, return the minimal length of a contiguous
+        subarray [numsl, numsl+1, ..., numsr-1, numsr] of which the sum is greater than or equal to target.
+        If there is no such subarray, return 0 instead.
+
+        Constraints:
+
+            1 <= target <= 10^9
+            1 <= nums.length <= 10^5
+            1 <= nums[i] <= 10^4
+     */
     @Test
     public void example1() {
 
@@ -37,7 +49,8 @@ public class S01_MinimumSizeSubarraySum {
     3. if sum >=k then left --, and subtract its value from the sum and calculate the index distance (right-left)
     4. if the sum <k again, then repeat step 2
     5. Iterate until condition breaks
-    6. Return the distance
+    6. If adding all values and doesn't meet the target then return 0
+    7. Return the distance
      */
     private int minimumSizeSum(int[] input, int k) {
 
