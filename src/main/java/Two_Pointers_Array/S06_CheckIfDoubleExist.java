@@ -1,4 +1,4 @@
-package twoPointers_Array;
+package Two_Pointers_Array;
 
 import java.util.HashSet;
 import java.util.Set;

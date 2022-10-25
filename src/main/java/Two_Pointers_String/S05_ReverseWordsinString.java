@@ -1,4 +1,4 @@
-package twoPointer_String;
+package Two_Pointers_String;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -58,7 +58,7 @@ public class S05_ReverseWordsinString {
 	 */
 	public String reverseWords(String s) {
 		
-		String[] split = s.split("\s+");
+		String[] split = s.split(" ");
 		String endResult = " ";
 		
 		for(int i=0; i< split.length; i++) {

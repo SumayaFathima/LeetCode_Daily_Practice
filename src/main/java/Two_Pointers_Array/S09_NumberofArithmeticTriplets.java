@@ -1,4 +1,4 @@
-package twoPointers_Array;
+package Two_Pointers_Array;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

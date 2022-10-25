@@ -1,9 +1,9 @@
-package twoPointers_Array;
+package Two_Pointers_Array;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class S01_MoveZeroes {
+public class 	S01_MoveZeroes {
 
     /*  Leetcode_283 :  https://leetcode.com/problems/move-zeroes/
     

@@ -1,10 +1,10 @@
 
-	package twoPointers_Array;
+	package Two_Pointers_Array;
 
 	import java.util.ArrayList;
 	import java.util.Arrays;
 	import java.util.List;
-	import org.testng.Assert;
+    import org.testng.Assert;
 	import org.testng.annotations.Test;
 
 	public class S02_IntersectionOfTwoArraysII {
@@ -22,32 +22,32 @@
 		
 		@Test
 		public void example1() {
-			int nums1[] = {1,2,2,1}; 
-			int nums2[] = {2,2};	
+			int[] nums1 = {1,2,2,1};
+			int[] nums2 = {2,2};
 			int[] output = {2,2};
 			Assert.assertEquals(intersection(nums1,nums2), output);
 		}
 		
 		@Test
 		public void example2() {
-			int nums1[] = {4,9,5}; 
-			int nums2[] = {9,4,9,8,4};	
+			int[] nums1 = {4,9,5};
+			int[] nums2 = {9,4,9,8,4};
 			int[] output = {4,9};
 			Assert.assertEquals(intersection(nums1,nums2), output);
 		}
 		
 		@Test
 		public void example3() {
-			int nums1[] = {5}; 
-			int nums2[] = {6};	
+			int[] nums1 = {5};
+			int[] nums2 = {6};
 			int[] output = {};
 			Assert.assertEquals(intersection(nums1,nums2), output);
 		}
 		
 		@Test
 		public void example4() {
-			int nums1[] = {8,8,8}; 
-			int nums2[] = {8};	
+			int[] nums1 = {8,8,8};
+			int[] nums2 = {8};
 			int[] output = {8};
 			Assert.assertEquals(intersection(nums1,nums2), output);
 		}
@@ -66,7 +66,7 @@
 		
 		public static int[] intersection(int[] nums1, int[] nums2) {
 
-			int left =0, right = 0, arrindex=0;		
+			int left =0, right = 0, arrindex=0;
 			
 			Arrays.sort(nums1);
 			Arrays.sort(nums2);		
@@ -87,7 +87,7 @@
 			
 			int[] arr = new int[s.size()];
 	        for(Integer a: s)   {
-	            arr[arrindex++]=a;  
+	            arr[arrindex++]=a;
 	        }
 	        return arr;
 	}
