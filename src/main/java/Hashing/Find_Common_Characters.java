@@ -14,35 +14,35 @@ public class Find_Common_Characters {
     @Test
     public void example1() {
 
-        String[] words = {"bella","label","roller"};
+        String[] words = {"bella","label","roller"};  // e,l,l
         System.out.println(commonChars(words));
     }
 
     @Test
     public void example2() {
 
-        String[] words = {"cool","lock","cook"};
+        String[] words = {"cool","lock","cook"}; //c,o
         System.out.println(commonChars(words));
     }
 
     @Test
     public void example3() {
 
-        String[] words = {" "," ","a"};
+        String[] words = {" "," ","a"};  // []
         System.out.println(commonChars(words));
     }
 
     @Test
     public void example4() {
 
-        String[] words = {"a","b","c"};
+        String[] words = {"a","b","c"};  //[]
         System.out.println(commonChars(words));
     }
 
     @Test
     public void example5() {
 
-        String[] words = {"aa","aaa","aaaa"};
+        String[] words = {"aa","aaa","aaaa"};  //a,a
         System.out.println(commonChars(words));
     }
 
