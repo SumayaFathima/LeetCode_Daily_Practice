@@ -49,7 +49,7 @@ public class S08_FlipAndInvertImage {
 	
 	/* Pseudo code:
 	 	
-	 	1. Create two pointers left=0, right= n-1 while given n = image.length
+	 	1. Create two pointers left=0, right= image.length-1
 	 	2. Traverse through the loop to reverse the array element in image array
 	 	3. Traverse through the loop to convert 0 to 1 and 1 to 0
 	 	4. Return the flipped image array
@@ -58,11 +58,9 @@ public class S08_FlipAndInvertImage {
 	 
 	public static int[][] flipAndInvertImage(int[][] image) {
 		
-		int n = image.length;
-
-		for(int i=0; i<n; i++) {  
+		for(int i=0; i<image.length; i++) {
 			
-			int left=0, right= n-1;
+			int left=0, right= image.length-1;
 			
 			while(left < right) {  
 				
@@ -74,9 +72,9 @@ public class S08_FlipAndInvertImage {
 			}
 		}
 		
-		for(int i=0; i<n; i++) {
+		for(int i=0; i<image.length; i++) {
 			
-			for(int j = 0; j<n; j++){
+			for(int j = 0; j<image.length; j++){
 				
 				if(image[i][j] == 0 ) 
 					image[i][j] = 1;

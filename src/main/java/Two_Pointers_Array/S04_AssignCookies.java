@@ -62,10 +62,10 @@ public class S04_AssignCookies {
 /* Pseudo Code :
 
     1. Check if array is empty or not, if yes return 0
-    2. Create two pointers left = 0 and right=0
+    2. Create two pointers p1 = 0 and p2=0
     3. Traversal array to each element to match s[j] >= g[i] 
-    4. If s[j] >= g[i], we can assign the cookie and the child will be content, increment left and right
-    5. Else increment left and move to next cookie
+    4. If s[j] >= g[i], we can assign the cookie and the child will be content, increment p1 and p2
+    5. Else increment p1 and move to next cookie
     6. Return the content cookie count */
 	
 	public static int findContentChildren(int[] g, int[] s) 
@@ -76,18 +76,18 @@ public class S04_AssignCookies {
 		Arrays.sort(g);
         Arrays.sort(s);
 
-		int left=0, right =0;
+		int p1=0, p2 =0;
 		
-		while(left < s.length && right< g.length) {
+		while(p1 < s.length && p2< g.length) {
 			
-			if(g[right] <= s[left])  {
-				g[right] = s[left];
-				left++;		
-				right++; }
-			
-		  else
-			left++;  }
-		return right;
+			if(g[p2] <= s[p1])  {
+				g[p2] = s[p1];
+				p1++;
+				p2++; }
+		  	else
+				p1++;  }
+
+		return p2;
         
         }	
 }

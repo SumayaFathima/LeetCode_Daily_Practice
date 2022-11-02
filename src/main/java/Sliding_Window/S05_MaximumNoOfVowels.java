@@ -71,3 +71,28 @@ public class S05_MaximumNoOfVowels {
         return (ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u');
     }
 }
+
+ /* Bruteforce :
+    public int maximumVowels(String s, int k) {
+
+        int maximum = Integer.MIN_VALUE;
+
+        if(s.length()==1 && isVowel(s.charAt(0))) return 1;
+        if(s.length()==1 && !isVowel(s.charAt(0))) return 0;
+
+        int count = 0;
+            for (int i = 0; i < s.length()-1; i++) {
+                count = 0;
+            for (int j = i; j< i+k-1; j++) {
+                if (isVowel(s.charAt(j))) count++;
+             }
+            maximum =  Math.max(maximum, count);
+            }
+        return maximum;
+        }
+
+
+    private boolean isVowel(char ch) {
+        return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
+    }
+} */

@@ -91,4 +91,34 @@
 	        }
 	        return arr;
 	}
-}		
+}
+
+	/*	public static int[] intersection(int[] nums1, int[] nums2) {
+
+			Arrays.sort(nums1);
+			Arrays.sort(nums2);
+			List<Integer> al = new ArrayList<Integer>();
+
+			int k = 0;
+
+			for (int i = 0; i < nums1.length; i++) {
+				for (int j = 0; j < nums2.length; j++) {
+					if (nums1[i] == nums2[j]) {
+						al.add(nums1[i]);
+						nums2[j] = 0;
+						break;
+					}
+				}
+			}
+			int[] arr = new int[al.size()];
+			for(Integer a : al) {
+				arr[k++] = a;
+			}
+
+        // for (int j = 0; j < al.size(); j++) {
+        //     arr[j] = al.get(j);
+        // }
+
+			return arr;
+		}
+	} */

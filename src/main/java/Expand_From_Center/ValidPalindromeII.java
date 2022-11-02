@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class ValidPalindromeII {
 
-    /* https://leetcode.com/problems/valid-palindrome-ii
+    /* Leetcode_680 : https://leetcode.com/problems/valid-palindrome-ii
 
         Given a string s, return true if the s can be palindrome after deleting at most one character from it.
 
@@ -62,7 +62,7 @@ public class ValidPalindromeII {
 
      */
 
-    private boolean validPalindrome(String s) {
+   private boolean validPalindrome(String s) {
 
         int left = s.length()/2 - s.length()%2, right = s.length()/2 + s.length() %2;
         if(left == right) left--;

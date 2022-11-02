@@ -5,6 +5,20 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class S10_ShortestDistanceToACharacter {
+
+	/* Leetcode_821 :  https://leetcode.com/problems/shortest-distance-to-a-character/
+
+		Given a string s and a character c that occurs in s, return an array of integers answer where answer.length == s.length
+		and answer[i] is the distance from index i to the closest occurrence of character c in s.
+
+		The distance between two indices i and j is abs(i - j), where abs is the absolute value function.
+
+	  Constraints:
+
+		1 <= s.length <= 10^4
+		s[i] and c are lowercase English letters.
+		It is guaranteed that c occurs at least once in s.
+	*/
 	
 	@Test
 	public void example1() {
@@ -39,24 +53,23 @@ public class S10_ShortestDistanceToACharacter {
 	 	5. When right matches the character, check for left<=right else increment right
 	 	6. Then update left by index (right-left) and increment left
 	 	7. Now traverse from right so left and right should be length-1
-	 	8. Traverse while right>=0 and repeat the same left and right pointers meet
+	 	8. Traverse while right>=0 and repeat until left and right pointers meet
 	 	9. Update the values into output array only when the difference if left-right is less than current array value
 	 	10.Return the output array
 	*/ 
 
 	public int[] shortestDistance(String s, char c) {
-		
-		int left = 0, right=0;
+
 		int length = s.length();
-		
-		int[] output = new int[length];
-		
-		Arrays.fill(output, Integer.MAX_VALUE);
-		
+		int[] arr = new int[length];
+		Arrays.fill(arr, Integer.MAX_VALUE);
+
+		int left = 0, right=0;
+
 		while(right<length) {
 			if(s.charAt(right) == c) {
 				while(left<=right) {
-					output[left] = right-left;
+					arr[left] = right-left;
 					left++;
 				}
 			}
@@ -67,13 +80,14 @@ public class S10_ShortestDistanceToACharacter {
 		while(right>=0) {
 			if(s.charAt(right) == c) {
 				while(left>=right) {
-					output[left] = Math.min(Math.abs(left-right), output[left]);
+
+					arr[left] = Math.min((left-right), arr[left]);
 					left--;
 				}
 			}
 			right--;
 		}
 		
-		return output;		 
+		return arr;
 	}
 }

@@ -57,33 +57,39 @@ import org.testng.annotations.Test;
 	    
 	 /*Pseudo code :
 		 
-		 1. create two pointers left = m-1 and right = n-1 and newindex = nums1.length-1;
-		 2. traverse while left >=0 or right>=0
-		 3. left or right index which ever is greater, add to the newindex and decrement both
-		 4. if right or left goes below 0, add value of other index and decrement both
-		 5. if left<0, then the right index value to be added to the newindex and decrement both
-		 6. return nums1
+		 1. Create two pointers left = m-1 and right = n-1 and newindex = m+n-1;
+		 2. Traverse while p1 >=0 and p2>=0
+		 3. If p1 > p2, add p1 to newindex and decrement both
+		 4. Else add p2 to newindex and decrement both
+		 5. Return nums1
 	 */
 	    
 	public int[] merge(int[] nums1, int m, int[] nums2, int n) {
 		
-		int left = m-1, right= n-1, newindex = nums1.length-1;
-		
-		while(left>=0 || right>=0) {
-			
-			if(right>=0 && left>=0) {
-							
-				if(nums1[left] <= nums2[right]) {
-					nums1[newindex--] = nums2[right--];
-				} 
-				else {
-					nums1[newindex--] = nums1[left--];
-				}
-			}	
-			if(right<0) nums1[newindex--] = nums1[left--];
-			
-			else if(left < 0) nums1[newindex--] = nums2[right--];
-				
-	    } return nums1;
+		int p1 = m-1, p2 = n-1, newindex = m+n-1;
+
+		while(p2 >= 0){
+
+			if(p1 >= 0 && nums1[p1] > nums2[p2]){
+				nums1[newindex--] = nums1[p1--];
+			}
+			else
+				nums1[newindex--] = nums2[p2--];
+
+		} return nums1;
 	}
-}
+	}
+
+
+/* Bruteforce :
+
+	public int[] merge(int[] nums1, int m, int[] nums2, int n) {
+
+		for (int i = 0; i < n; i++, m++) {
+		nums1[m] = nums2[i];
+		}
+		Arrays.sort(nums1);
+		return nums1;
+		}
+		}
+*/

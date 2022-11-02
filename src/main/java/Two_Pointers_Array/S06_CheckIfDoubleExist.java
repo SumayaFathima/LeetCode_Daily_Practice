@@ -85,11 +85,23 @@ public class S06_CheckIfDoubleExist {
 			    
 			        if(set.contains(arr[i] * 2) || (arr[i]%2 ==0 &&  set.contains(arr[i] / 2) ))
 			        	return true;
-			        else
-			            set.add(arr[i]);
-			        	System.out.println(set);
+                    else
+			           set.add(arr[i]);
 			        }
 			   
 			    return false;
 			}
 	}
+
+    /* Bruteforce :
+
+        public boolean checkExist(int[] arr) {
+
+        for (int i = 0; i < arr.length;; i++)
+            for (int j = 0; j < arr.length;; j++)
+                if (i != j && arr[i] == 2 * arr[j])
+                    return true;
+
+        return false;
+    }
+     */

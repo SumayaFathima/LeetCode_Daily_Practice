@@ -73,10 +73,10 @@ public class 	S01_MoveZeroes {
 					int temp = nums[right];
 					nums[right] = nums[left];
 					nums[left] = temp;
-					right++; 
+					right++;
 					left++;}
 					
-				else 
+				else
 					left++;
 			}
 			 return nums;
@@ -85,16 +85,17 @@ public class 	S01_MoveZeroes {
 
 	/* Bruteforce :
 
-	 for(int i=0, j=0; i<nums.length; i++) {
+	 public static int[] moveZeroes(int[] nums) {
 
-                if(nums[i] != 0) {
+		 for(int i =0, j= 0; i<nums.length; i++) {
 
-                    int temp = nums[j];
-                    nums[j++] = nums[i];
-                    nums[i] = temp;
-                }
-        }
-        return nums;
-    }
-}
-	 */
+			 if(nums[i] != 0) {
+				 int temp = nums[i];
+				 nums[i]= nums[j];
+				 nums[j] = temp;
+				 j++;
+			 }
+
+		 }   return nums;
+	 }
+} */

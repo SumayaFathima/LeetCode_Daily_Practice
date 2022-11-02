@@ -52,6 +52,25 @@ public class SubarrayProductLessThanK {
         Assert.assertEquals(subarrayProduct(nums, k), output);
     }
 
+    @Test
+    public void example5() {
+
+        int[] nums = {1,1,1};
+        int k = 1;
+        int output = 0;
+        Assert.assertEquals(subarrayProduct(nums, k), output);
+    }
+
+    @Test
+    public void example6() {
+
+        int[] nums = {0,0,5};
+        int k = 10;
+        int output = 6;
+        Assert.assertEquals(subarrayProduct(nums, k), output);
+    }
+
+
     /* Pseudo code:
 
       1. Consider 2 loops i and j
@@ -61,8 +80,8 @@ public class SubarrayProductLessThanK {
       5. Else break and increment i and iterate the loop until the condition fails
       6. Return the count of the subarrays whose product was < k
 
-    */
-    private int subarrayProduct(int[] nums, int k) {
+
+  /*  private int subarrayProduct(int[] nums, int k) {
 
         int count = 0, mul = 0;
 
@@ -84,6 +103,29 @@ public class SubarrayProductLessThanK {
             }
         }
 
+        return count;
+    }
+} */
+
+    private int subarrayProduct(int[] nums, int k) {
+
+        if (k == 0) return 0;
+        int left = 0, right = 0, mul = 1, count = 0;
+
+       while (right < nums.length) {
+
+            mul = mul * nums[right];
+
+            while (left < nums.length && mul >= k) {
+                mul = mul / nums[left];
+                left++;
+            }
+
+            if (mul < k) {
+                count += right - left + 1;
+            }
+           right++;
+        }
         return count;
     }
 }

@@ -3,6 +3,8 @@ package Two_Pointers_Array;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.Arrays;
+
 public class S05_RemoveElement {
 	
 	 /* Leetcode_27 : leetcode.com/problems/remove-element/
@@ -28,38 +30,38 @@ public class S05_RemoveElement {
 	0 <= val <= 100
 	
 	*/
-	
-	
+
+
 	@Test
-	public void example1() {		
-		int[] nums = {3,2,2,3};
+	public void example1() {
+		int[] nums = {3, 2, 2, 3};
 		int val = 2;
 		int output = 2;
-		Assert.assertEquals(removeElement(nums,val), output);
+		Assert.assertEquals(removeElement(nums, val), output);
 	}
-	
+
 	@Test
 	public void example2() {
 		int[] nums = {5};
 		int val = 3;
 		int output = 1;
-		Assert.assertEquals(removeElement(nums,val), output);
+		Assert.assertEquals(removeElement(nums, val), output);
 	}
-	
+
 	@Test
 	public void example3() {
 		int[] nums = {4};
 		int val = 4;
 		int output = 0;
-		Assert.assertEquals(removeElement(nums,val), output);
+		Assert.assertEquals(removeElement(nums, val), output);
 	}
-	
+
 	@Test
 	public void example4() {
 		int[] nums = {};
 		int val = 8;
 		int output = 0;
-		Assert.assertEquals(removeElement(nums,val), output);
+		Assert.assertEquals(removeElement(nums, val), output);
 	}
 	
 	/*
@@ -71,22 +73,34 @@ public class S05_RemoveElement {
 	 3. If left != val, swap left and right and increment both
 	 4. else increment left alone
 	 5. Return right
-	 */	
-	
-	 public int removeElement(int[] nums, int val) {
-		  
-		 if(nums.length == 0) return 0;
-		  
-			int left =0, right =0;
-			
-			while(left <nums.length) {					
-				
-				if(nums[left] != val) 		{			
-					nums[right++]=nums[left];
-		            left++;		}
-		            
-		            else left++;
-			}
-			return right;
+	 */
+
+	public int removeElement(int[] nums, int val) {
+
+		if (nums.length == 0) return 0;
+
+		int left = 0, right = 0;
+
+		while (right < nums.length) {
+
+			if (nums[right] != val) {
+				nums[left++] = nums[right];
+				right++;
+			} else right++;
 		}
+		return left;
+	}
+
 }
+
+	/*public int removeElement(int[] nums, int val) {
+
+		if(nums.length == 0) return 0;
+		int k=0;
+
+		for(int i=0; i<nums.length; i++)
+			if(nums[i]!=val)
+			  nums[k++]=nums[i];
+		return k;
+	}
+} */

@@ -76,9 +76,11 @@ public class LongestPalindromicSubstring {
     5. If length of the substring > maxlen then maxlen = l and its respective index substring should be saved in str
     8. Return str - the maximum length palindrome substring
 
-     */
+    */
 
-    private String longestPalindrome(String s) {
+ /*  Bruteforce:
+
+        private String longestPalindrome(String s) {
 
         if (s.length() == 1) return s;
         int maxlen = 0;
@@ -114,9 +116,36 @@ public class LongestPalindromicSubstring {
         while (start <= end) {
             if (str.charAt(start) != str.charAt(end)) return false;
             else
-            start++;
+                start++;
             end--;
         }
         return true;
+    }
+} */
+
+   public int start, end;
+
+    public String longestPalindrome(String s) {
+
+        for (int i = 0; i < s.length(); i++) {
+
+            palindrome(s, i, i);
+            palindrome(s, i, i + 1);
+        }
+
+        return s.substring(start, start + end);
+    }
+
+     public void palindrome(String s, int left, int right) {
+
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            left--;
+            right++;
+        }
+
+        if (end < right - left - 1) {
+            start = left + 1;
+            end = right - left - 1;
+        }
     }
 }

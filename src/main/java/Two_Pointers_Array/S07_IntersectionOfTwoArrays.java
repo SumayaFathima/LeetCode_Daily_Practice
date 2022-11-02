@@ -10,18 +10,15 @@ import org.testng.annotations.Test;
 
 public class S07_IntersectionOfTwoArrays {
 	
-	/* Leetcode_349 :  https://leetcode.com/problems/shortest-distance-to-a-character/
+	/* Leetcode_349 :  https://leetcode.com/problems/intersection-of-two-arrays/
 	
-		Given a string s and a character c that occurs in s, return an array of integers answer where answer.length == s.length 
-		and answer[i] is the distance from index i to the closest occurrence of character c in s.
-		
-		The distance between two indices i and j is abs(i - j), where abs is the absolute value function.
+	Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be
+	unique and you may return the result in any order.
 		
 	  Constraints:
 
-		1 <= s.length <= 104
-		s[i] and c are lowercase English letters.
-		It is guaranteed that c occurs at least once in s.
+		1 <= nums1.length, nums2.length <= 1000
+		0 <= nums1[i], nums2[i] <= 1000
 	*/
 	
 	@Test
@@ -96,4 +93,34 @@ public class S07_IntersectionOfTwoArrays {
         
         return arr;
     }
-}	
+}
+
+/*	public static int[] intersection(int[] nums1, int[] nums2) {
+
+			Arrays.sort(nums1);
+			Arrays.sort(nums2);
+			Set<Integer> s = new HashSet();
+
+			int k = 0;
+
+			for (int i = 0; i < nums1.length; i++) {
+				for (int j = 0; j < nums2.length; j++) {
+					if (nums1[i] == nums2[j]) {
+						s.add(nums1[i]);
+						nums2[j] = 0;
+						break;
+					}
+				}
+			}
+			int[] arr = new int[s.size()];
+			for(Integer a : s) {
+				arr[k++] = a;
+			}
+
+        // for (int j = 0; j < s.size(); j++) {
+        //     arr[j] = s.get(j);
+        // }
+
+			return arr;
+		}
+	} */
