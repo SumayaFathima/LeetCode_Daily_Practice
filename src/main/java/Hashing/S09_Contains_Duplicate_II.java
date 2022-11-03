@@ -5,10 +5,23 @@ import org.testng.Assert;
 
 import java.util.HashMap;
 
-public class Contains_Duplicate_II {
+public class S09_Contains_Duplicate_II {
+
+    /* Leetcode_219 : https://leetcode.com/problems/contains-duplicate-ii/
+
+        Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array
+        such that nums[i] == nums[j] and abs(i - j) <= k.
+
+      Constraints:
+
+        1 <= nums.length <= 10^5
+       -109 <= nums[i] <= 10^9
+        0 <= k <= 105
+
+     */
 
     @Test
-    public void example1() {
+    public void example1() {   // negative, <, == , >
 
         int[] nums = {1,2,3,1};
         int k = 3;
@@ -35,22 +48,32 @@ public class Contains_Duplicate_II {
     }
 
     @Test
-    public void example4() {   //this should be true only right but has n
+    public void example4() {
 
-        int[] nums = {1};
+        int[] nums = {1,2,2,4};
         int k = 5;
-        boolean output = false;
+        boolean output = true;
         Assert.assertEquals(containsDuplicateII(nums,k), output);
     }
 
     @Test
     public void example5() {
 
-        int[] nums = {1};
+        int[] nums = {1,1};
         int k = 0;
         boolean output = false;
         Assert.assertEquals(containsDuplicateII(nums,k), output);
     }
+
+    @Test
+    public void example6() {
+
+        int[] nums = {-5,-5};
+        int k = 1;
+        boolean output = true;
+        Assert.assertEquals(containsDuplicateII(nums,k), output);
+    }
+
 
     /* Pseudo code :
 
@@ -77,7 +100,7 @@ public class Contains_Duplicate_II {
     }
 }
 
-    //Bruteforce :   --> Time limit exceeded
+    //Bruteforce :
 
      /*   public boolean containsDuplicateII(int[] nums, int k) {
 

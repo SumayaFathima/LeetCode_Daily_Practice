@@ -6,7 +6,7 @@ import org.testng.Assert;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Number_of_Good_Pairs {
+public class S03_Number_of_Good_Pairs {
 
     /* Leetcode_1512 : https://leetcode.com/problems/number-of-good-pairs/description/
 

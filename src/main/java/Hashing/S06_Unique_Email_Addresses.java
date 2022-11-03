@@ -6,7 +6,7 @@ import org.testng.Assert;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Unique_Email_Addresses {
+public class S06_Unique_Email_Addresses {
 
     /* Leetcode_929 : https://leetcode.com/problems/unique-email-addresses/
 

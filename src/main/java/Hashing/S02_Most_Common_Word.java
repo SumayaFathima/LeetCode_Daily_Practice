@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class Most_Common_Word {
+public class S02_Most_Common_Word {
 
     /* Leetcode_819 :  https://leetcode.com/problems/most-common-word/description/
 

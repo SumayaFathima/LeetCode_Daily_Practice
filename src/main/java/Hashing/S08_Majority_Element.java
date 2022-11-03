@@ -6,7 +6,20 @@ import org.testng.Assert;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class Majority_Element {
+public class S08_Majority_Element {
+
+    /* Leetcode_169 : https://leetcode.com/problems/majority-element/description/
+
+        Given an array nums of size n, return the majority element.
+        The majority element is the element that appears more than ⌊n / 2⌋ times.
+        You may assume that the majority element always exists in the array.
+
+        Constraints:
+
+          n == nums.length
+          1 <= n <= 5 * 104
+         -109 <= nums[i] <= 109
+     */
 
     @Test
     public void example1() {
@@ -37,6 +50,22 @@ public class Majority_Element {
 
         int[] nums = {1};
         int output = 1;
+        Assert.assertEquals(majorityElement(nums), output);
+    }
+
+    @Test
+    public void example5() {
+
+        int[] nums = {-1,-2,-2,-2,-1};
+        int output = -2;
+        Assert.assertEquals(majorityElement(nums), output);
+    }
+
+    @Test
+    public void example6() {
+
+        int[] nums = {-5};
+        int output = -5;
         Assert.assertEquals(majorityElement(nums), output);
     }
 

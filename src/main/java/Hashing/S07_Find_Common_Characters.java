@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class Find_Common_Characters {
+public class S07_Find_Common_Characters {
 
     @Test
     public void example1() {

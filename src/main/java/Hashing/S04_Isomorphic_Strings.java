@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class Isomorphic_Strings {
+public class S04_Isomorphic_Strings {
 
     /* Leetcode_205 : https://leetcode.com/problems/isomorphic-strings/
 

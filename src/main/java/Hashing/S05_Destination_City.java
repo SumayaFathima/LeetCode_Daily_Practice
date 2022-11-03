@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import java.util.*;
 
 
-public class Destination_City {
+public class S05_Destination_City {
 
     @Test
     public void example1() {
