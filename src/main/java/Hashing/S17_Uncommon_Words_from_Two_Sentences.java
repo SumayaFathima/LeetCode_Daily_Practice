@@ -1,4 +1,4 @@
-package Homeworks;
+package Hashing;
 
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Uncommon_Words_from_Two_Sentences {
+public class S17_Uncommon_Words_from_Two_Sentences {
 
     @Test
     public void example1() {

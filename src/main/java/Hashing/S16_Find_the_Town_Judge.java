@@ -1,4 +1,4 @@
-package Homeworks;
+package Hashing;
 
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
@@ -6,7 +6,7 @@ import org.testng.Assert;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Find_the_Town_Judge {
+public class S16_Find_the_Town_Judge {
 
         /* Leetcode_997 : https://leetcode.com/problems/find-the-town-judge/description/
 

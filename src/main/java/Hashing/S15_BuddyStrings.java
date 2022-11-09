@@ -1,11 +1,11 @@
-package Homeworks;
+package Hashing;
 
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
 
 import java.util.*;
 
-public class BuddyStrings {
+public class S15_BuddyStrings {
 
     @Test
     public void example1() {
