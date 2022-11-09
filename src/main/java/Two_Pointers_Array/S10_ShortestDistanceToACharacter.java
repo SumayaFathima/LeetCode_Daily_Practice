@@ -38,9 +38,9 @@ public class S10_ShortestDistanceToACharacter {
 	
 	 @Test
 	 public void example3() {
-	    String s = "";
+	    String s = "m";
 	    char c = 'm';
-	    int[] output = {};
+	    int[] output = {0};
 	    Assert.assertEquals(shortestDistance(s, c), output);
 	}
 	 
