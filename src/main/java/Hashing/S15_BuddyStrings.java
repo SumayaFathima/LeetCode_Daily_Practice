@@ -7,6 +7,21 @@ import java.util.*;
 
 public class S15_BuddyStrings {
 
+    /* Leetcode_859 : https://leetcode.com/problems/buddy-strings/
+
+        Given two strings s and goal, return true if you can swap two letters in s so the result is equal to goal, otherwise,
+        return false.
+        Swapping letters is defined as taking two indices i and j (0-indexed) such that i != j and swapping the characters
+        at s[i] and s[j].
+
+        For example, swapping at indices 0 and 2 in "abcd" results in "cbad".
+
+        Constraints:
+
+            1 <= s.length, goal.length <= 2 * 104
+            s and goal consist of lowercase letters.
+     */
+
     @Test
     public void example1() {
 
@@ -44,7 +59,7 @@ public class S15_BuddyStrings {
     }
 
     @Test
-    public void example6() {
+    public void example5() {
 
         String s = "saas";
         String goal = "saas";
@@ -53,7 +68,7 @@ public class S15_BuddyStrings {
     }
 
     @Test
-    public void example7() {
+    public void example6() {
 
         String s = "abcd";
         String goal = "abcd";
@@ -62,7 +77,7 @@ public class S15_BuddyStrings {
     }
 
     @Test
-    public void example8() {
+    public void example7() {
 
         String s = "abcdef";
         String goal = "fedcba";
@@ -72,7 +87,7 @@ public class S15_BuddyStrings {
 
 
     @Test
-    public void example9() {
+    public void example8() {
 
         String s = "ssssssrt";
         String goal = "sssssstr";
@@ -81,7 +96,7 @@ public class S15_BuddyStrings {
     }
 
     @Test
-    public void example10() {
+    public void example9() {
 
         String s = "tsrrrrrr";
         String goal = "strrrrrr";
@@ -125,9 +140,10 @@ public class S15_BuddyStrings {
             }
         }
 
+        ArrayList<Integer> list = new ArrayList();
+
         while(left < s.length()) {
 
-            ArrayList<Integer> list = new ArrayList();
             char[] sch = s.toCharArray();
             char[] gch = goal.toCharArray();
 
