@@ -108,9 +108,8 @@ public class S15_BuddyStrings {
 
         1. Declare a map and create two pointers left =0, right =0
         2. If s and goal are equal
-		       * Add s in map with occurrence
-		       * with entryset check if any Keyvalue is > 1
-		       * if yes then return true (As those letters can be swapped and make s and goal equal)
+		       * Add s in set if not present
+		       * if already present then return true (As those letters can be swapped and can make s and goal equal)
         3. If s and goal are not equal :
 		       * Create array list and convert both strings into character array
 	           * Traverse while left < s.length()
@@ -126,17 +125,15 @@ public class S15_BuddyStrings {
         if(s.length() != goal.length()) return false;
         int left =0, right =0;
 
-        Map<Object, Integer> map = new HashMap<>();
+        Set set = new HashSet();
 
         if(s.equals(goal)) {
 
             for (int i = 0; i < s.length(); i++) {
-                map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
-            }
-
-            for (Map.Entry<Object, Integer> entry : map.entrySet()) {
-                if (entry.getValue() > 1)
+                if(set.contains(s.charAt(i)))
                     return true;
+                else
+                    set.add(s.charAt(i));
             }
         }
 
