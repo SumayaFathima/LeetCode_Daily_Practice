@@ -73,7 +73,7 @@ public class S13_NumberofArithmeticTriplets {
 
 	 */
 
-	 public int arithmeticTriplets(int[] nums, int diff) {
+	/* public int arithmeticTriplets(int[] nums, int diff) {
 
 		int count = 0;
 		HashMap<Integer,Integer> map = new HashMap();
@@ -90,11 +90,11 @@ public class S13_NumberofArithmeticTriplets {
 		}
 		return count;
 	}
-}
+} */
 
 	// Using for-each
 
-	/* public int arithmeticTriplets(int[] nums, int diff) {
+	 public int arithmeticTriplets(int[] nums, int diff) {
 
 		int count = 0;
 		HashMap<Integer, Integer> map = new HashMap();
@@ -111,7 +111,7 @@ public class S13_NumberofArithmeticTriplets {
 		}
 		return count;
 	}
-} */
+}
 	
 	/* Pseudo code:
 	 

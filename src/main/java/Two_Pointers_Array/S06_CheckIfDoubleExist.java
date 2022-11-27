@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class S06_CheckIfDoubleExist { 
 	
-	 /*  Leetcode_1346 :leetcode.com/problems/check-if-n-and-its-double-exist/
+	 /*  Leetcode_1346 :https://leetcode.com/problems/check-if-n-and-its-double-exist/
 	  
     Given an array arr of integers, check if there exist two indices i
     and j such that :

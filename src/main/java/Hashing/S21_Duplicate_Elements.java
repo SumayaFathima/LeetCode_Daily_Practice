@@ -52,7 +52,7 @@ public class S21_Duplicate_Elements {
      5. Return not duplicate by default
 
     */
-    public String nearbyDuplicate(int[] nums, int k) {
+ /*   public String nearbyDuplicate(int[] nums, int k) {
 
         String dup = "Duplicates found";
         String notdup = "Duplicates not found";
@@ -68,8 +68,8 @@ public class S21_Duplicate_Elements {
         }
         return notdup;
     }
-}
-  /*  public String nearbyDuplicate(int[] nums, int k) {
+} */
+   public String nearbyDuplicate(int[] nums, int k) {
 
         String dup = "Duplicates found";
         String notdup = "Duplicates not found";
@@ -86,4 +86,4 @@ public class S21_Duplicate_Elements {
 
         } return notdup;
     }
-} */
+}

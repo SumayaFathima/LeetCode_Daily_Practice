@@ -68,7 +68,7 @@ public class S01_ReversePrefixOfWord {
 	   4. Find first occurrence of ch in the array to find the index value
 	   5. Assign index to left and traverse if right < left
        6. Then swap and increment and  return the character array as string
-	 
+
   */	
 		
 	public String reversePrefix(String word, char ch) {
@@ -98,3 +98,30 @@ public class S01_ReversePrefixOfWord {
 		return String.valueOf(charr);
 	}
 }
+
+
+  /* public String reversePrefix(String word, char ch) {
+
+		char[] s = word.toCharArray();
+
+		int left =0, right =0;
+
+		while(left<s.length && right<s.length) {
+
+			if(s[right] == ch) {
+				while(left<=right) {
+
+					char temp = s[right];
+					s[right--] = s[left];
+					s[left++] = temp;
+				}
+				break;
+			}
+			else
+				right++;
+		}
+		return String.valueOf(s);
+
+	}
+} */
+

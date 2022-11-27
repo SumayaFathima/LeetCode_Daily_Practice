@@ -91,3 +91,37 @@ public class S04_AssignCookies {
         
         }	
 }
+
+
+ /*	public int findContentChildren(int[] g, int[] s) {
+
+		Arrays.sort(s);
+		Arrays.sort(g);
+		int count =0;
+
+		for(int i=0, j=0; j<g.length && i<s.length; i++) {
+
+			if(s[i]>= g[j]) {
+				j++;
+				count++;
+			}
+		} return count;
+	}
+} */
+
+ /*	public int findContentChildren(int[] g, int[] s) {
+  		Arrays.sort(s);
+		Arrays.sort(g);
+		int i=0, j=0, count=0;
+
+			while(i<g.length && j<s.length){
+				if(s[j]>= g[i]) {
+					i++;
+					j++;
+					count++;
+				}
+				else
+				j++;
+			} return count;
+		}
+	} */

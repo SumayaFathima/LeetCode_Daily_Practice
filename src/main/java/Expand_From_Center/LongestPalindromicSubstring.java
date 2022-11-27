@@ -78,7 +78,7 @@ public class LongestPalindromicSubstring {
 
     */
 
- /*  Bruteforce:
+ //  Bruteforce:
 
         private String longestPalindrome(String s) {
 
@@ -121,9 +121,9 @@ public class LongestPalindromicSubstring {
         }
         return true;
     }
-} */
+}
 
-   public int start, end;
+ /*  public int start, end;
 
     public String longestPalindrome(String s) {
 
@@ -148,4 +148,6 @@ public class LongestPalindromicSubstring {
             end = right - left - 1;
         }
     }
-}
+} */
+
+

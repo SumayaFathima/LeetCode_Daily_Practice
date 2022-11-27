@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import java.util.HashSet;
 import java.util.Set;
 
-public class LongestNiceSubstring {
+public class S10_LongestNiceSubstring {
 
     @Test   //check for empty string
     public void example1() {

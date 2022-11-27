@@ -64,7 +64,7 @@
 		 
 	*/	
 		
-		public static int[] intersection(int[] nums1, int[] nums2) {
+	/*	public static int[] intersection(int[] nums1, int[] nums2) {
 
 			int left =0, right = 0, arrindex=0;
 			
@@ -91,9 +91,9 @@
 	        }
 	        return arr;
 	}
-}
+} */
 
-	/*	public static int[] intersection(int[] nums1, int[] nums2) {
+		public static int[] intersection(int[] nums1, int[] nums2) {
 
 			Arrays.sort(nums1);
 			Arrays.sort(nums2);
@@ -121,4 +121,4 @@
 
 			return arr;
 		}
-	} */
+	}

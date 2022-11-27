@@ -55,15 +55,15 @@ public class S08_FlipAndInvertImage {
 	 	4. Return the flipped image array
 	 	
 	*/
-	 
-	public static int[][] flipAndInvertImage(int[][] image) {
-		
+
+	/* public static int[][] flipAndInvertImage(int[][] image) {
+
 		for(int i=0; i<image.length; i++) {
-			
+
 			int left=0, right= image.length-1;
-			
-			while(left < right) {  
-				
+
+			while(left < right) {
+
 				int temp = image[i][left];
 				image[i][left] = image[i][right];
 				image[i][right] = temp;
@@ -71,16 +71,44 @@ public class S08_FlipAndInvertImage {
 				right--;
 			}
 		}
-		
+
 		for(int i=0; i<image.length; i++) {
-			
+
 			for(int j = 0; j<image.length; j++){
-				
-				if(image[i][j] == 0 ) 
+
+				if(image[i][j] == 0 )
 					image[i][j] = 1;
-				
+
 				else if(image[i][j] == 1 )
 					image[i][j] = 0;
+			}
+		}
+		return image;
+	}
+} */
+
+	public int[][] flipAndInvertImage(int[][] image) {
+
+		for(int i=0;i<image.length;i++)
+		{
+			int left=0,right=image.length-1;
+			while(left<=right)
+			{
+				if(image[i][left]==image[i][right])
+				{
+					if(image[i][left]==0)
+					{
+						image[i][left]=1;
+						image[i][right]=1;
+					}
+					else
+					{
+						image[i][left]=0;
+						image[i][right]=0;
+					}
+				}
+				left++;
+				right--;
 			}
 		}
 		return image;
