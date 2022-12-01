@@ -94,7 +94,7 @@ public class S02_Subarray_Sum_Equals_K {
            sum += nums[i];
 
            if(map.containsKey(sum-k)) {
-               count = map.get(sum-k);
+               count += map.get(sum-k);
            }
            map.put(sum, map.getOrDefault(sum,0) +1);
        }
