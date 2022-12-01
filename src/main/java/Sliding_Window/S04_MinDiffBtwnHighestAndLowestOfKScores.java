@@ -63,7 +63,7 @@ public class S04_MinDiffBtwnHighestAndLowestOfKScores{
        7. Return the minimum value
     */
 
-    public int minimumDifferenceHandL(int[] input, int k) {
+  /*  public int minimumDifferenceHandL(int[] input, int k) {
 
         int minimum = Integer.MAX_VALUE;
         int pointer=input.length-1, diff =0;
@@ -86,4 +86,16 @@ public class S04_MinDiffBtwnHighestAndLowestOfKScores{
 
         return minimum;
     }
+} */
+
+    public int minimumDifferenceHandL(int[] input, int k) {
+        int n = input.length;
+        int res = Integer.MAX_VALUE; // 1 4 7 9
+        Arrays.sort(input);
+
+        for(int i=0;i<=n-k;i++) {
+            res = Math.min(res, input[i + k - 1] - input[i]);
+        }
+        return res;
+        }
 }

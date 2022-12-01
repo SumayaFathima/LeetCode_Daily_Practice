@@ -22,8 +22,8 @@ public class MaximumProductSubarray {
     @Test
     public void example4() {
 
-        int[] nums = {-2, -4};
-        int output = 8;
+        int[] nums = {2,3,-2,4};
+        int output = 6;
         Assert.assertEquals(maximumProduct(nums), output);
     }
 
@@ -55,8 +55,8 @@ public class MaximumProductSubarray {
     }
 } */
 
-
-    private int maximumProduct(int[] nums) {
+/*  ----- wrong --------
+    private int maximumProduct(int[] nums) {//2 3 -2 4
 
     int maximum = nums[0], mul = 1;
 
@@ -67,11 +67,11 @@ public class MaximumProductSubarray {
             maximum = mul;
 
         if (mul == 0)
-            mul = 1;
+                mul = 1;
     }
         return maximum;
     }
-}
+} */
 
 
 
@@ -88,7 +88,7 @@ public class MaximumProductSubarray {
 
     */
 
-    /*    public int maximumProduct(int[] nums) {
+       public int maximumProduct(int[] nums) {
 
         if(nums==null||nums.length==0)   return 0;
         if(nums.length == 1) return nums[0];
@@ -108,4 +108,3 @@ public class MaximumProductSubarray {
     }
 }
 
-*/

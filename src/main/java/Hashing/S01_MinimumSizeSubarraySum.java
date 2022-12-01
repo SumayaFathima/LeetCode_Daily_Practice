@@ -1,4 +1,4 @@
-package Two_pointer_Grow_Shrink;
+package Hashing;
 
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
@@ -66,7 +66,7 @@ public class S01_MinimumSizeSubarraySum {
     6. If adding all values and doesn't meet the target then return 0
     7. Return the distance
      */
-  /*  private int minimumSizeSum(int[] input, int k) {
+    private int minimumSizeSum(int[] input, int k) {
 
         int distance = Integer.MAX_VALUE;
         int left =0, right =0, sum=0;
@@ -77,8 +77,8 @@ public class S01_MinimumSizeSubarraySum {
                 sum += input[right++];
 
             else if (sum >=k) {
-                sum -= input[left];
                 distance = Math.min(distance, right -left);
+                sum -= input[left];
                 left++;
             }
             else if (distance == Integer.MAX_VALUE) return 0;
@@ -86,9 +86,9 @@ public class S01_MinimumSizeSubarraySum {
         }
         return distance;
     }
-} */
+}
 
-    private int minimumSizeSum(int[] input, int k) {
+ /*  private int minimumSizeSum(int[] input, int k) {
 
         if (input.length == 0) return 0;
         if (input.length == 1) return 1;
@@ -115,4 +115,4 @@ public class S01_MinimumSizeSubarraySum {
         return minimum;
     }
 }
-
+*/

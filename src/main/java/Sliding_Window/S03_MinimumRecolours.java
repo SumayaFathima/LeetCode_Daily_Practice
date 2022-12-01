@@ -71,7 +71,7 @@ public class S03_MinimumRecolours {
 
     public int minimumRecolors(String blocks, int k) {
 
-        int minimum = Integer.MIN_VALUE;
+        int minimum = Integer.MAX_VALUE;
         int pointer=0, count=0;
 
         if(blocks.length() < k)  return 0;

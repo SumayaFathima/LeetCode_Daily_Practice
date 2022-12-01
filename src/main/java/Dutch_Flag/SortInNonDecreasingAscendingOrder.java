@@ -7,7 +7,7 @@ public class SortInNonDecreasingAscendingOrder {
 
 
      /*
-        Given an array which contains only 0,1, and . Sort the array in an non-decreasing order.
+        Given an array which contains only 0,1, and 2. Sort the array in an non-decreasing order.
 
     */
 
@@ -32,7 +32,7 @@ public class SortInNonDecreasingAscendingOrder {
      4.If the nums[middle] is 0, swap middle and low values and low++, middle++ pointer
      5.Break the loop when middle<=high or when middle > high
 */
-    public int[] sortArrayAscending(int[] nums) {
+ /*   public int[] sortArrayAscending(int[] nums) {
 
         int low = 0, middle = 0, high = nums.length - 1;
 
@@ -58,18 +58,18 @@ public class SortInNonDecreasingAscendingOrder {
         }
         return nums;
     }
-}
+} */
 
 
-    /* Bruteforce :
+    // Bruteforce :
 
-       public int[] sortArray(int[] nums) {
+       public int[] sortArrayAscending(int[] nums) {
 
         int[] newarray = new int[nums.length];
         int index = 0;
 
-        for (int i : new int[]{0, 1, 2}) {
-
+      //  for (int i : new int[]{0, 1, 2}) {
+           for (int i = 0; i <= 2 ; i++) {
             for (int j = 0; j < newarray.length; j++) {
 
                 if (nums[j] == i)
@@ -78,4 +78,4 @@ public class SortInNonDecreasingAscendingOrder {
         }
         return newarray;
     }
-} */
+}

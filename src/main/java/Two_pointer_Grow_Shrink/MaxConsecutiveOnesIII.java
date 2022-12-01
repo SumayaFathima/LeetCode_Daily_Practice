@@ -41,7 +41,7 @@ public class MaxConsecutiveOnesIII {
 
         int[] nums = {0,0,1,1,0,0,1,1,1,0,1,1,0};
         int k = 0;
-        int output = 0;
+        int output = 3;
         Assert.assertEquals(maxOnes(nums, k), output);
     }
 

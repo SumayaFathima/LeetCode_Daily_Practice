@@ -61,9 +61,7 @@ public class S01_Find_All_Anagrams_in_a_String {
             return true;
         }
 
-        else
-
-        return false;
+        else    return false;
     }
 
     public List<Integer> findAnagrams(String s, String p) {
