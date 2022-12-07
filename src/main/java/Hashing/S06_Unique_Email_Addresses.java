@@ -78,12 +78,12 @@ public class S06_Unique_Email_Addresses {
     5. Place the local name in loop and save in result
     6. Add the result of local name with @ and domain name
     7. Place the email in map
-    8. Take the count of ketset and return the count
+    8. Take the count of keyset and return the count
 
    */
     public int numUniqueEmails(String[] emails) {
 
-        Map<String,String> map = new HashMap<String, String>();
+        Map<String,Integer> map = new HashMap<String, Integer>();
 
         for(String email : emails){
 
@@ -97,13 +97,12 @@ public class S06_Unique_Email_Addresses {
             }
             result = result + "@" + split1[1];
 
-            map.put(result,result);
-
+            map.put(result, map.getOrDefault(result, 0) +1);
         }
 
         int count = 0;
         for(String key: map.keySet()){
-            count += 1;
+            count++;
         }
 
         return count;
