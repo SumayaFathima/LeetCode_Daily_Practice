@@ -22,7 +22,7 @@ public class MaximumProductSubarray {
     @Test
     public void example4() {
 
-        int[] nums = {2,3,-2,4};
+        int[] nums = {2, 3, -2, 4};
         int output = 6;
         Assert.assertEquals(maximumProduct(nums), output);
     }
@@ -37,7 +37,7 @@ public class MaximumProductSubarray {
     5. Return maximum
      */
 
-   /*  Bruteforce :
+    /*  Bruteforce :
 
    private int maximumProduct(int[] nums) {
 
@@ -55,27 +55,7 @@ public class MaximumProductSubarray {
     }
 } */
 
-/*  ----- wrong --------
-    private int maximumProduct(int[] nums) {//2 3 -2 4
-
-    int maximum = nums[0], mul = 1;
-
-        for (int i = 1; i < nums.length; i++) {
-               mul *= nums[i];
-
-        if (maximum < mul)
-            maximum = mul;
-
-        if (mul == 0)
-                mul = 1;
-    }
-        return maximum;
-    }
-} */
-
-
-
-    // Another way :
+// Another way :
 
   /* Pseudo code :
 
@@ -88,7 +68,7 @@ public class MaximumProductSubarray {
 
     */
 
-       public int maximumProduct(int[] nums) {
+/* public int maximumProduct(int[] nums) {
 
         if(nums==null||nums.length==0)   return 0;
         if(nums.length == 1) return nums[0];
@@ -107,4 +87,24 @@ public class MaximumProductSubarray {
         return result;
     }
 }
+*/
 
+    // Kandane :
+    private int maximumProduct(int[] nums) {//2 3 -2 4
+
+        int prod = 1;
+        int maxProd = nums[0];
+        for (int i = 0; i < nums.length; i++) {
+            prod *= nums[i];
+            if (maxProd < prod) maxProd = prod;
+            if (prod == 0) prod = 1;
+        }
+        prod = 1;
+        for (int j = nums.length - 1; j >= 0; j--) {
+            prod *= nums[j];
+            if (maxProd < prod) maxProd = prod;
+            if (prod == 0) prod = 1;
+        }
+        return maxProd;
+    }
+}

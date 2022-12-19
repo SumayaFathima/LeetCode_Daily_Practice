@@ -1,4 +1,4 @@
-package Sliding_Window.Recursion;
+package Recursion;
 
 import LinkedList.ListNode;
 import LinkedList.S03_Linked_List_Cycle;
@@ -101,19 +101,20 @@ public class S04_Remove_Linked_List_Elements {
         while (head != null && head.val == val)
             head = head.next;
 
-        return recursion(head,val);
+        ListNode temp = head;
+        return recursion(head,val, temp);
     }
 
-    public ListNode recursion(ListNode head, int val) {
+    public ListNode recursion(ListNode head, int val, ListNode temp) {
 
-        ListNode temp = head;
-
-        while(temp != null && temp.next != null) {
+        if(temp != null && temp.next != null) return head;
 
             if (temp.next.val == val) {
                 temp.next = temp.next.next;
             }
             else temp = temp.next;
-        } return head;
+
+            recursion(head, val, temp);
+            return head;
     }
 }

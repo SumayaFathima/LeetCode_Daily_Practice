@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MinimumAndMaximum {
 
-    //https://www.hackerrank.com/challenges/mini-max-sum
+    //https://www.hackerrank.com/challenges/mini-max-sum/problem
 
     public static void miniMaxSum(List<Integer> arr) {
 

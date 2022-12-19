@@ -81,7 +81,7 @@ public class S02_Search_Insert_Position_35 {
      */
     public int searchInsert(int[] nums, int target) {
 
-        int left =0, right = nums.length-1, mid;   // -1 0 3 5 9 12 //9
+     int left =0, right = nums.length-1, mid;   //1 3 5 6 //7
 
         while(left<=right) {
 

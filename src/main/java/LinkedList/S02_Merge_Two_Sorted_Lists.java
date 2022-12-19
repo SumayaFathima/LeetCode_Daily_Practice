@@ -203,8 +203,7 @@ public class S02_Merge_Two_Sorted_Lists {
         }
 
         if(node1!= null)    temp.next = node1;
-        else temp.next = node2; {
-        }
+        else temp.next = node2;
 
         return node3.next;
     }

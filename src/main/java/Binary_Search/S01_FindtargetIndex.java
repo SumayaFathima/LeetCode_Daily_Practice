@@ -5,7 +5,14 @@ import org.testng.Assert;
 
 public class S01_FindtargetIndex {
 
-    /* Find the index of target value */
+
+    /* Leetcode_704: https://leetcode.com/problems/binary-search/description/
+
+    Given an array of integers nums which is sorted in ascending order, and an integer target, write a function
+    to search target in nums. If target exists, then return its index. Otherwise, return -1.
+    You must write an algorithm with O(log n) runtime complexity.
+
+     */
 
     @Test
     public void example1() {
@@ -63,7 +70,7 @@ public class S01_FindtargetIndex {
 
     public int find(int[] nums, int target) {
 
-        int left =0, right = nums.length-1, mid;   // -1 0 3 5 9 12 //9
+        int left =0, right = nums.length-1, mid;   // -1 0 3 5 9 12 //2
 
         while(left<=right) {
 
