@@ -1,4 +1,4 @@
-package Practice;
+package Daily_Practice;
 
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
@@ -47,6 +47,8 @@ public class S152_Maximum_Product_Subarray {
 6. Assign back prod to 1 and continue the same steps from reverse traversal
 7. Return the maxprod
  */
+
+
     private int maximumProduct(int[] nums) {
 
         int prod = 1;

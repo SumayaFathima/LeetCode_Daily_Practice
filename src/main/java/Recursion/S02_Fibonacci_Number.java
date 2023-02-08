@@ -10,8 +10,8 @@ public class S02_Fibonacci_Number {
     @Test
     public void example1() {
 
-        int n = 5;
-        int output = 120;
+        int n = 2;
+        int output = 1;
         Assert.assertEquals(fibonacci(n), output);
     }
     private int fibonacci(int n) {

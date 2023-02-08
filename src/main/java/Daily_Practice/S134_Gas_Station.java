@@ -1,4 +1,4 @@
-package Daily_Practise;
+package Daily_Practice;
 
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
@@ -47,6 +47,7 @@ public class S134_Gas_Station {
      4. If the efficiency value is < 0, reset the index as current +1 and efficiency as 0
      5. Return the start index finally
      */
+
     public int canCompleteCircuit(int[] gas, int[] cost) {
 
         int efficiency = 0,startIndex = 0, gasSum = 0,costSum = 0;

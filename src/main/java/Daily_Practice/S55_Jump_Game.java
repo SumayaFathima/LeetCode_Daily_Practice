@@ -1,4 +1,4 @@
-package Practice;
+package Daily_Practice;
 
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
@@ -53,6 +53,7 @@ Pseudo code :
 4. If pivot equals/crosses last element in the array then return true
 5. Return  false
  */
+
     public boolean canJump(int[] nums) {
 
             int pivot =0;
