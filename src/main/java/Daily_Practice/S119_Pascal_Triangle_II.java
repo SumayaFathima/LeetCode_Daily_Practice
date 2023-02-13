@@ -1,4 +1,4 @@
-package Class_Practice;
+package Daily_Practice;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

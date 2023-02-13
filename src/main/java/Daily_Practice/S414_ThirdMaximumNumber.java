@@ -1,4 +1,4 @@
-package Class_Practice;
+package Daily_Practice;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,6 +16,12 @@ public class S414_ThirdMaximumNumber {
         int output = 1;
         Assert.assertEquals(thirdMax(nums), output);
     }
+
+    /*
+    Add all nums in set
+    if set size >=3 then delete last 2 maximum and return the current maximum
+    else return the maximum
+     */
 
     public int thirdMax(int[] nums) {
     Set<Integer> set = new HashSet<>();
