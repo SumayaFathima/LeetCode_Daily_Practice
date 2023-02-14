@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class S589_BuddyStrings {
+public class S589_Buddy_Strings {
 
     @Test
     public void example1() {
@@ -58,8 +58,8 @@ public class S589_BuddyStrings {
       - If s and goal are not equal then create array list and convert both strings into character array
 	  - Traverse while left < s.length() and check each letters of s with goal
 	  - if it is same then left++ and right++ else add the index of s in a list
-	  - when list size becomes 2, swap the s indexes and check if it matches goal
-	  - if yes return true else false
+	  - when list size becomes 2, swap the s indexes
+	  - check if array both matches, if yes return true else false
       - return false by default
      */
     public boolean buddyStrings(String s, String goal) {
