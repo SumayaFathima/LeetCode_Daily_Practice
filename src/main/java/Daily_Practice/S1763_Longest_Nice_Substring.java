@@ -40,13 +40,13 @@ public class S1763_Longest_Nice_Substring {
     public String longestNiceSubstring(String s) {
         if(s.length() ==1)  return "";
 
-        HashSet<Character> hs=new HashSet<>();
+        HashSet<Character> set =new HashSet<>();
         for(int i=0;i<s.length();i++){
-            hs.add(s.charAt(i));
+            set.add(s.charAt(i));
         }
 
         for(int i=0;i<s.length();i++){
-            if(hs.contains(Character.toLowerCase(s.charAt(i))) && hs.contains(Character.toUpperCase(s.charAt(i))))
+            if(set.contains(Character.toLowerCase(s.charAt(i))) && set.contains(Character.toUpperCase(s.charAt(i))))
                 continue;
 
             String sub1=longestNiceSubstring(s.substring(0,i));
