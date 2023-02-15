@@ -70,7 +70,6 @@ public class S589_Buddy_Strings {
         Set set = new HashSet();
 
         if(s.equals(goal)) {
-
             for (int i = 0; i < s.length(); i++) {
                 if(set.contains(s.charAt(i)))
                     return true;
