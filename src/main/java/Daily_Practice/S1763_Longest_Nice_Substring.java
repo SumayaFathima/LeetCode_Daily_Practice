@@ -42,12 +42,11 @@ public class S1763_Longest_Nice_Substring {
 
         HashSet<Character> hs=new HashSet<>();
         for(int i=0;i<s.length();i++){
-            char c=s.charAt(i);
-            hs.add(c);
+            hs.add(s.charAt(i));
         }
+
         for(int i=0;i<s.length();i++){
-            char c=s.charAt(i);
-            if(hs.contains(Character.toLowerCase(c)) && hs.contains(Character.toUpperCase(c)))
+            if(hs.contains(Character.toLowerCase(s.charAt(i))) && hs.contains(Character.toUpperCase(s.charAt(i))))
                 continue;
 
             String sub1=longestNiceSubstring(s.substring(0,i));
