@@ -40,6 +40,7 @@ public class S1763_Longest_Nice_Substring {
     public String longestNiceSubstring(String s) {
         if(s.length() ==1)  return "";
 
+
         HashSet<Character> set =new HashSet<>();
         for(int i=0;i<s.length();i++){
             set.add(s.charAt(i));

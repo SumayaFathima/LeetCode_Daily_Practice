@@ -30,14 +30,16 @@ public class S49_GroupAnagrams {
 
 
     /*
-    Create a hashmap with String and ArrayList<String>>
-    Convert to charArray and sort
-    Iterate each element and check if it is in map
-    if yes - create a list and add in list then put in map
-    if no - create a new list and add in list then put in map
-    Add the result to a new list and return
+    Pseudo code :
+        - Create a hashmap with String and ArrayList<String>>
+        - Convert to charArray and sort
+        - Iterate each element and check if it is in map
+        - if yes - create a list and add in list then put in map
+        - if no - create a new list and add in list then put in map
+        - Add the result to a new list and return
      */
     public List<List<String>> groupAnagrams(String[] strs) {
+
         List<List<String>> newlist = new ArrayList();
         HashMap<String, ArrayList<String>> map = new HashMap<>();
 
