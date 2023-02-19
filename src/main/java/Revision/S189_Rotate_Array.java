@@ -1,4 +1,4 @@
-package Daily_Practice;
+package Revision;
 
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;

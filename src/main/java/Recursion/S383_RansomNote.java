@@ -1,4 +1,4 @@
-package Daily_Practice;
+package Recursion;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
