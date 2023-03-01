@@ -1,4 +1,4 @@
-package Revision;
+package Assignments;
 
 import LinkedList.S03_Linked_List_Cycle;
 import org.testng.Assert;

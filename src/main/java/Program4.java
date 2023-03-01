@@ -5,9 +5,5 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class Program2 {
-
-    
-
-
+public class Program4 {
 }
