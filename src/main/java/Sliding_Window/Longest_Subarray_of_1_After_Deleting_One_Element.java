@@ -5,7 +5,7 @@ import org.testng.Assert;
 
 import java.util.Arrays;
 
-public class Longest_Subarray_of_1_After_Deleting_One_Element {
+public class    Longest_Subarray_of_1_After_Deleting_One_Element {
 
     /* Leetcode_1493 : https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/
 
