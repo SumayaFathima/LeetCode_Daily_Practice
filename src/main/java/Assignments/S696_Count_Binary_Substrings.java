@@ -45,6 +45,24 @@ public class S696_Count_Binary_Substrings {
      */
     public int countBinarySubstrings(String s) {
 
-        return 0;
+        int pointer = 1, count =0, zerocount =0, onecount =0;
+        char[] ch = s.toCharArray();
+
+        if(ch[0] == '0') zerocount++;
+        else onecount++;
+
+        while(pointer < ch.length) {
+
+            if(ch[pointer] == '0')
+                zerocount++;
+            if(ch[pointer] == '1')
+                onecount++;
+
+            if((zerocount == onecount) || ch[pointer-1] != ch[pointer]) count++;
+
+            pointer++;
+
+        }
+        return count;
     }
 }
